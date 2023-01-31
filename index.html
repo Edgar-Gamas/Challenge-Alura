@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset/reset.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img class="letra" src="Imagenes/G.png" alt="Gamas" />
+      <p class="titulo">Encriptador de mensajes</p>
+    </header>
+
+    <main>
+      <section class="section_1">
+        <input
+          type="text"
+          class="mensaje"
+          id="frase"
+          placeholder="Escriba su mensaje..."
+        />
+
+        <div class="advertencia">
+          <p>» Solo letras minusculas y sin acentos</p>
+        </div>
+        <div class="contenedor_botones">
+          <button type="button" class="boton_encriptar" id="boton_encriptar">
+            Encriptar
+          </button>
+          <button
+            type="button"
+            class="boton_desencriptar"
+            id="boton_desencriptar"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <section class="section_2">
+        <div class="contenedor_img">
+          <img
+            class="imagendere"
+            id="imagendere"
+            src="Imagenes/Muneco.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <textarea
+            class="respuesta"
+            id="respuesta"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto que desees encriptar o desencriptar"
+          ></textarea>
+        </div>
+        <div class="contenedor_copiar">
+          <button type="button" class="boton_copiar" id="boton_copiar">
+            Copiar
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="pie">Autor: Edgar Ivan Gamas Hilerio</p>
+    </footer>
+  </body>
+
+  <script>
+    var boton_encriptado = document.querySelector("#boton_encriptar");
+    boton_encriptado.onclick = encriptado;
+
+    var boton_desencriptar = document.querySelector("#boton_desencriptar");
+    boton_desencriptar.onclick = desencriptar;
+
+    var boton_copiar = document.querySelector("#boton_copiar");
+    boton_copiar.onclick = copiar;
+  </script>
+</html>
